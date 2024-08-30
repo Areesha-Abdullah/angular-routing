@@ -1,0 +1,28 @@
+<div class="container">
+    <div>
+        <!-- //abs path -->
+    <!-- <a routerLink="/home">Go to Home</a> -->
+    <!-- relative path -->
+    <!-- <a routerLink="Home">Go to Home</a> -->
+    <a (click)="home()">Go to Home</a>
+
+    </div>
+    
+    <div class="card" *ngFor="let c of courses">
+        <div><img [src]="c.image" alt="" style="width: 200px; height: 150px;"></div>
+        <div class="details">
+            <h3>{{c.name}}</h3>
+            <span>{{c.description}}</span>
+            <div>
+                <span>{{c.type}}</span>
+                <span><b>price: </b>{{c.price}}</span>
+            </div>
+            <div>
+                <button routerLink="/courses/course/{{c.cId}}">Show Details</button>
+                <button>Buy Now</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
